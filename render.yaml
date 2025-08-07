@@ -5,3 +5,24 @@ services:
     name: n8n-service
     image:
       url: docker.io/n8nio/n8n:latest
+    envVars:
+      - key: N8N_CUSTOM_EXTENSIONS
+        value: n8n-nodes-zalo-tools
+      - key: DB_POSTGRESDB_DATABASE
+        value: postgres
+      - key: DB_POSTGRESDB_HOST
+        value: aws-0-ap-southeast-1.pooler.supabase.com
+      - key: DB_POSTGRESDB_PASSWORD
+        value: Dangtai@123
+      - key: DB_POSTGRESDB_PORT
+        value: 6543
+      - key: DB_POSTGRESDB_SSL
+        value: true
+      - key: DB_POSTGRESDB_USER
+        value: postgres.luypvlpyrkvfwaaqwymq
+      - key: DB_TYPE
+        value: postgresdb
+      - key: N8N_ENCRYPTION_KEY
+        value: YourSecretEncryptionKeyHere
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: true
